@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/comfy_app
+    username: postgres
+    password: 2002
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation : true
+
+
+            open-in-view: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  messages:
+    always-use-message-format: true
+
+
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: swagger-ui
+  api-docs:
+    path: /api-docs
